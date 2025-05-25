@@ -1,3 +1,22 @@
+@font-face {
+  font-family: MainTitle;
+  src: url("../public/fonts/Unageo-Medium.ttf") format('truetype');
+}
+
+@import "https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap";
+@import "tailwindcss";
+
+
+@theme {
+  --color-background: #818354;
+  --color-card-bg: #2A2B20;
+  --color-button-hover: #4A4B2F;
+  --font-MuseoModerno: 'MuseoModerno', 'sans-serif';
+  --font-MainTitle: 'MainTitle', 'sans-serif';
+}
+
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -24,17 +43,12 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
+/*
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -53,6 +67,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+  */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -66,3 +81,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#root {
+  margin: 20 auto;
+  padding-bottom: 1rem;
+}
+
