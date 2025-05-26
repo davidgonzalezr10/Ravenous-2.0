@@ -2,7 +2,6 @@ import searchbarBg from '../../assets/searchbarBg.png';
 import React, { useState } from 'react';
 
 const SearchBar = ({ handleSearch }) => {
-
     const [term, setTerm] = useState('')
     const [location, setLocation] = useState('')
     const [sortBy, setSortBy] = useState('best_match')
