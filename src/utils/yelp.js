@@ -1,0 +1,1 @@
+const yelpKey = 'OTAvKD-tEQ62tAX6R0Q0cv_4TVWKwxIoHOqj7EgbCchkW3ee7pRvhH96OOEJz2Ji0DbQZCGdeg-p7HKZpWtwfhl5a0paA-nBG_CwfnUuSyg6bbdfnLFPb1-OhAMuaHYx'

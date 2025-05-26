@@ -1,8 +1,3 @@
-@font-face {
-  font-family: MainTitle;
-  src: url("../public/fonts/Unageo-Medium.ttf") format('truetype');
-}
-
 @import "https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap";
 @import "tailwindcss";
 
@@ -11,8 +6,14 @@
   --color-background: #818354;
   --color-card-bg: #2A2B20;
   --color-button-hover: #4A4B2F;
+  --color-header-bg: #1D1D19;
   --font-MuseoModerno: 'MuseoModerno', 'sans-serif';
   --font-MainTitle: 'MainTitle', 'sans-serif';
+}
+
+@font-face {
+  font-family: MainTitle;
+  src: url("/fonts/Unageo-Medium.ttf") format('truetype');
 }
 
 
