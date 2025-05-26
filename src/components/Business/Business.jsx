@@ -7,8 +7,9 @@ const Business = ({ business }) => {
     }
 
     const onAddressClick = (event) => {
-        const googleUrl = 'https://www.google.com/maps/place/'
-        window.open(googleUrl, '_blank')
+        const address = `${business.address}, ${business.city}, ${business.state} ${business.zipCode}`.replace(/\s+/g, '+');
+        const googleUrl = `https://www.google.com/maps/search/?api=1&query=${address}`;
+        window.open(googleUrl, '_blank');
     }
 
     return (
