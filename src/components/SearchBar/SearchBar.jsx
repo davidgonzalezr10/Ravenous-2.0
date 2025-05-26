@@ -1,11 +1,12 @@
 import searchbarBg from '../../assets/searchbarBg.png';
 import React, { useState } from 'react';
 
-const SearchBar = () => {
+const SearchBar = ({ handleSearch }) => {
 
     const [term, setTerm] = useState('')
     const [location, setLocation] = useState('')
     const [sortBy, setSortBy] = useState('best_match')
+    const [lastSearch, setLastSearch] = useState({ term: '', location: '' })
 
     const sortByOptions = ['best_match', 'rating', 'review_count'];
     
@@ -24,7 +25,10 @@ const SearchBar = () => {
     };
 
     const handleSortChange = (sortByOption) => {
-        setSortBy(sortByOption);        
+        setSortBy(sortByOption);
+        if (lastSearch.term && lastSearch.location) {
+            handleSearch(lastSearch.term, lastSearch.location, sortByOption);
+        }
     };
 
     const handleTermChange = ({ target }) => {
@@ -36,10 +40,13 @@ const SearchBar = () => {
     }
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`)
-        setTerm('');
-        setLocation('');
+        event.preventDefault()
+        if (handleSearch) {
+            handleSearch(term, location, sortBy)
+            setLastSearch({ term, location })
+            setTerm('')
+            setLocation('')
+        }
     }
 
     const renderSortByOptions = () => {
